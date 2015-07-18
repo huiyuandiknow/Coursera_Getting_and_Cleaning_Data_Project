@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Data:</title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<p>####<em>Hui-yu Yang</em>
+####<em>July 17 2015</em></p>
+
+<h3>Data:</h3>
+
+<p>The data come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. Some of these measurements underwent the Fast Fourier Transform to produce the frequency domain signals. The time domain signals were captured at a constant rate of 50 Hz, and they were filtered using a median filter and a third order low pass Butterworth filter with a corner frequency of 20 Hz to remove the noise. Then these signals were separated based on body or gravity acceleration signals using another low pass Butterworth filter with a corner frequency of 0.3 Hz. </p>
+
+<p>This .txt file contains the mean of each of the 79 features per subject and activity. There are 30 subjects and 6 activities in this file, and so the dimension of the dataset is 180 by 81. The two extra columns are the identifer variables (subject ID and activity).  </p>
+
+<h3>List of Variables:</h3>
+
+<h4>1. Identifier variables</h4>
+
+<ul>
+<li>subject: The subject identification associated with each measurement </li>
+<li>activity: The type of activities performed by the subjects, including walking, walking upstairs, walking downstairs, 
+        sitting, standing, and laying. </li>
+</ul>
+
+<h4>2. Measurement variables</h4>
+
+<p>Each measurement is a feature mean. The names of these features consist of three parts, namely, description, type of function, and orientation. For descriptions, there are 16 variations as listed below. </p>
+
+<ul>
+<li>tBodyAcc: for time domain body accerlation </li>
+<li>tGravityAcc for time domain gravity acceleration </li>
+<li>tBodyAccJerk for time domain body acceleration </li>
+<li>tBodyGyro for time domain gyroscope </li>
+<li>tBodyGyroJerk for time domain gyroscope jerk </li>
+<li>tBodyAccMag for time domain body acceleration magnitude</li>
+<li>tGravityAccMag for time domain body acceleration magnitude </li>
+<li>tBodyAccJerkMag for time domain body jerk magnitude</li>
+<li>tBodyGyroMag for time domain body gyroscope magnitude</li>
+<li>tBodyGyroJerkMag for time domain body gyroscope jerk magnitude</li>
+<li>fBodyAcc for frequency domain body acceleration</li>
+<li>fBodyAccJerk for frequency domain body jerk</li>
+<li>fBodyGyro for frequency domain gyroscope</li>
+<li>fBodyAccMag for frequency domain acceleration magnitude</li>
+<li>fBodyAccJerkMag for frequency domain jerk magnitude</li>
+<li>fBodyGyroMag for for frequency domain gyroscope magnitude</li>
+<li>fBodyGyroJerkMag for frequency domain gyroscope jerk magnitude</li>
+</ul>
+
+<p>For type of functions, it&#39;s either the mean or the standard deviation of the feature. 
+For the orientation, it&#39;s either X, Y, or Z. As an example, the variable &ldquo;tBodyAcc-mean()-X&rdquo; is the time domain body acceleration mean in the X direction. </p>
+
+<h3>Data processing</h3>
+
+<ol>
+<li><p>Merges the training and the test sets to create one data set. There are 2 datasets, one with the measurement values and another with the activity labels. The training and test sets were combined using <em>rbind()</em> for these two sets of datasets separately. </p></li>
+<li><p>Extracts only the measurements on the mean and standard deviation for each measurement. The list of features contain the word &ldquo;mean&rdquo; or &ldquo;sd&rdquo; were extracted from features.txt with <em>grep()</em>. Then the list of feature values associated with those features were stored in a new dataset. </p></li>
+<li><p>Uses descriptive activity names to name the activities in the data set. With the activity_labels.txt file, the activity labels were replaced by the actual activiy names. </p></li>
+<li><p>Appropriately labels the data set with descriptive variable names. The column names of the features were replaced by their own names from features.txt. The overall data was combined here with <em>cbind()</em>.   </p></li>
+<li><p>From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. With <em>ddply()</em>, the column averages were calculated for these 79 features per subject and activity. </p></li>
+</ol>
+
+</body>
+
+</html>
