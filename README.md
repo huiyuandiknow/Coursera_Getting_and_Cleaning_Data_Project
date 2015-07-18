@@ -8,7 +8,7 @@ This repository was created for the project of coursera course "Getting and Clea
 
 ### The dataset includes the following files:
 
-- **run_analysis.R**: Gets the data online and creates the average of 79 features associated with mean or sd per subject and activity. 
+- **run_analysis.R**: Gets the data online and creates a dataset with the average of 79 features associated with mean or sd per subject and activity. 
 
 - **CodeBook.Rmd**: describes the data, list of variables, and how data was processed in run_analysis.R. 
 
