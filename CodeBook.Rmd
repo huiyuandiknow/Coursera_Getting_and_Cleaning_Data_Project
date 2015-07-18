@@ -17,7 +17,7 @@ This .txt file contains the mean of each of the 79 features per subject and acti
             
 #### 2. Measurement variables
 
-Each measurement is a feature mean. The names of these features consist of three parts, namely, description, type of function, and orientation. For descriptions, there are 16 variations as listed below. 
+Each measurement is a feature mean. The original measurements were normalized by the original authors, so the final measurements are unitless and are from the [-1, 1] interval. The names of these features consist of three parts, namely, description, type of function, and orientation. For descriptions, there are 16 variations as listed below. 
 
 - tBodyAcc: for time domain body accerlation 
 - tGravityAcc for time domain gravity acceleration 
